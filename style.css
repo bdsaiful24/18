@@ -234,7 +234,7 @@ p{
     width: 22%;
     margin-left: 2%;
     box-shadow: 0 0 10px 0px rgba(0,0,0, .1111);
-    border: 2px double #e79230;
+    border: 3px double #e79230;
 }
 .team-member:hover{
     box-shadow: 0 0 20px 0px rgba(0,0,0, .2);
