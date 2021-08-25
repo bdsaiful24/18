@@ -1,0 +1,452 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+.fixed-width{
+    max-width: 1200px;
+    margin: auto;
+}
+.clear::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+a{
+    text-decoration: none;
+}
+p{
+    color: #7d7d7d;
+}
+.btn{
+    display: inline-block;
+    padding: 15px 25px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: #fff;
+    color: #8e97a3;
+    font-weight: 600;
+    font-size: 22px;
+}
+.btn:hover{
+    background: #aa972c;
+    color: #fff;
+}
+/* Begain the CSS */
+.header-section{
+    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+.logo {
+	width: 30%;
+	margin-top: 10px;
+}
+.logo img{
+    width: 70px;
+}
+.menu{
+    width: 68%;
+    text-align: right;
+}
+.menu ul li{
+    display: inline-block;
+    position: relative;
+}
+.menu ul li a{
+    display: inline-block;
+    padding: 0 15px;
+    color: #010101;
+    font-size: 18px;
+    line-height: 60px;
+}
+.menu ul li:hover > a{
+    color: #7d7d7d;
+}
+/* DropDown Menu */
+.menu ul li ul{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    transform: scaleY(0);
+    transition: .4s;
+    transform-origin: top center;
+}
+.menu ul li ul li{
+    display: block;
+}
+.menu ul li ul li a{
+    display: block;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+.menu ul li:hover > ul{
+    transform: scaleY(1);
+}
+.menu ul li ul li ul{
+    position: absolute;
+    top: 0;
+    left: -100%;
+}
+
+/* Banner Section */
+.banner-section{
+    background: url(img/BG.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 200px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.banner-section::before{
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .5);
+    position: absolute;
+    z-index: -1;
+}
+.banner-section h6{
+    font-size: 35px;
+    font-weight: 400;
+}
+.banner-section h1{
+    font-size: 60px;
+    font-weight: 700;
+    padding: 20px 0;
+}
+/* Service Section */
+.content-heading{
+    padding: 20px 0;
+    text-align: center;
+}
+.content-heading h1{
+    font-size: 55px;
+    padding: 20px 0;
+}
+.content-heading p {
+	font-size: 25px;
+}
+/* Pricing Section */
+.price-section{
+    padding: 30px 0;
+    background: #eef1fc;
+}
+.price-section .content-heading h1{
+    font-weight: 400;
+}
+.pricing-table{
+    width: 32%;
+    margin-left: 2%;
+    padding-bottom: 25px;
+    box-sizing: border-box;
+    background: #fff;
+    text-align: center;
+    transition: .4s;
+}
+.pricing-table:nth-child(3n+1){
+    margin-left: 0;
+}
+.price-value{
+    text-align: left;
+    padding: 30px;
+    border-bottom: 1px solid #7d7d7d;
+}
+.price-value h4{
+    font-size: 28px;font-weight: 500;
+}
+.price-value strong{
+    padding: 30px 0;
+    display: inline-block;
+    font-size: 50px;
+}
+.price-value span{
+    font-size: 20px;
+}
+.price-value h6{
+    font-size: 22px;
+    font-weight: 400;
+}
+.price-value p{
+    padding: 20px 0;
+    font-weight: 300;
+    font-size: 20px;
+}
+.price-content{
+    text-align: left;
+    padding: 30px;
+}
+.price-content ul{
+    list-style: none;
+}
+.price-content ul li{
+    padding: 10px 0;
+    font-size: 25px;
+    color: #7d7d7d;
+}
+.price-content ul li span{
+    margin-right: 10px;
+    color: #e79230;
+}
+.pricing-table:hover .btn{
+    background: #aa972c;
+    color: #fff;
+}
+.pricing-table:hover .price-value{
+    background: #aa972c;
+    color: #fff;
+}
+.pricing-table:hover p{
+    color: #fff;
+}
+.pricing-table:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0, .2);
+}
+.pricing-table .btn:hover{
+    background: #000;
+}
+/* TEam Section */
+.team-section{
+    padding: 20px 0;
+}
+.team-section h1{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 500;
+    padding: 40px 0;
+}
+.team-member{
+    width: 22%;
+    margin-left: 2%;
+    box-shadow: 0 0 10px 0px rgba(0,0,0, .1111);
+    border: 2px double #e79230;
+}
+.team-member:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0, .2);
+}
+.team-member:nth-child(5n+1){
+    margin-left: 1%;
+}
+
+.team-member img{
+    width: 100%;
+}
+.members-details{
+    padding: 30px;
+}
+.members-details h4{
+    padding: 10px 0;
+    font-size: 25px;
+}
+.team-member:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0, .2);
+}
+/* newsletter-section */
+.newsletter-section{
+    background: #f5f5f5;
+    padding: 100px 0;
+    text-align: center;
+}
+.newsletter-section form{
+    width: 40%;
+    margin: auto;
+}
+.newsletter-section form input {
+	padding: 20px 10px;
+	border: 1px solid #aa972c;
+    width: 100%;
+	background: #fff;
+	border-radius: 5px;
+    margin-bottom: 20px;
+}
+.newsletter-section form input:focus{
+    box-shadow: 0 0 20px 0px rgba(0,0,0, .2);
+    outline: 1px solid #aa972c;
+}
+.newsletter-section .btn {
+	background: #aa972c;
+	color: #fff;
+}
+.newsletter-section .btn:hover{
+    color: #aa972c;
+    background: #fff;
+    border: 2px solid #aa972c;
+}
+/* Features Section */
+.feature-section{
+    padding: 20px 0;
+}
+.feature-content{
+    padding: 20px 0;
+    box-shadow: 0 0 20px 0px rgba(0,0,0, .1111);
+}
+.feature-item{
+    width: 38%;
+    transition: .4s;
+}
+.feature-item:nth-child(2){
+    width: 60%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.feature-item img{
+    width: 100%;
+}
+.feature-item ol {
+	list-style-position: inside;
+	font-size: 21px;
+	font-weight: 600;
+	color: #555663;
+}
+.feature-item ol li{
+    padding: 20px 0;
+}
+.feature-item ol li h4{
+    display: inline-block;
+    color: #55555a;
+    padding-bottom: 15px;
+    font-size: 22px;
+}
+.feature-item ol li p{
+    color: #877478;
+    font-size: 18px;
+}
+.feature-content:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0, .3);
+}
+/* Testimonial Section */
+.testimonial-section{
+    padding: 40px 0;
+    background: #f5f5f5;
+    
+}
+.testimonials-item{
+    width: 30%;
+    margin-left: 5%;
+    background: #f5f5f5;
+    border: 2px solid #d5d5d5;
+    box-sizing: border-box;
+    padding-bottom: 25px;
+}
+.testimonials-item:nth-child(3n+1){
+    margin-left: 0;
+}
+.comment{
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 0 20px 0px rgba(56, 44, 44, 0.1);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 40px;
+}
+.comment::before {
+	font-family: "FontAwesome";
+	content: "\f10d";
+	font-size: 65px;
+	position: absolute;
+	top: 3px;
+	left: 26px;
+	z-index: -1;
+	opacity: .13;
+}
+.comment::after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 100%;
+	left: 45%;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 30px 20px 0 20px;
+	border-color: #fff transparent transparent transparent;
+}
+.comment:hover{
+    box-shadow: 2.5px 4.33px 30px 0 rgba(64,87,191,0.1);
+}
+.comment p{
+    font-size: 25px;
+    text-align: center;
+}
+.user {
+	width: 60%;
+    margin: 0 auto;
+	text-align: center;
+}
+.user img {
+	width: 80px;
+	height: 80px;
+    border: 5px solid #aa972c;
+    margin-right: 15px;
+}
+.user-info{
+    text-align: left;
+}
+.user-info h4 {
+	font-size: 22px;
+	font-weight: 500;
+	padding: 20px 0 5px;
+}
+/* Contact Section CSS */
+
+.contact-form{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 30px 0;
+}
+.contact-form h1{
+    padding: 10px 0;
+    font-weight: 400;
+}
+.contact-form p{
+    padding: 10px;
+}
+.contact-form form input,textarea{
+    padding: 15px 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #aa972c;
+    border-radius: 10px;
+}
+.contact-form form input,textarea:focus{
+    outline: #aa972c;
+}
+.contact-form .btn {
+	background: #aa972c;
+	color: #fff;
+}
+.contact-form .btn:hover{
+    color: #aa972c;
+    background: #fff;
+    border: 2px solid #aa972c;
+}
+.w-100{
+    width: 100%;
+}
+.w-50{
+    width: 48%;
+}
+.footer-section{
+    padding: 15px 0;
+    text-align: center;
+}
+.footer-section a,p{
+    color: #000;
+}
